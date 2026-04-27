@@ -2,7 +2,24 @@
     "$schema": "https://raw.githubusercontent.com/FLECS-Technologies/app-sdk/3.0.0/manifest.schema.json",
     "_schemaVersion": "3.0.0",
     "app": "de.gmn.heartbeat",
-    "version": "##VERSION##",
+    "version": "0.1.0",
     "revision": "0",
-    "image": "flecs.azurecr.io/de.gmn.heartbeat"
+    "image": "flecs.azurecr.io/de.gmn.heartbeat",
+    "multiInstance": false,
+    "editors": [
+        {
+            "name": "Heart-Beat Dashboard",
+            "port": 8060,
+            "supportsReverseProxy": false
+        }
+    ],
+    "ports": [
+        "8060:8060",
+        "8090:8090"
+    ],
+    "volumes": [
+        "data:/app/data",
+        "fleetManagementData:/app/fleetManagementData"
+    ],
+    "env": []
 }

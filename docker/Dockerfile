@@ -2,11 +2,7 @@ ARG ARCH
 ARG VERSION
 ARG VARIANT
 
-FROM scratch:${VERSION}
+FROM gmn1908/heartbeat:${VERSION}
 
 ARG ARCH
-ARG VERSION
-ARG VARIANT
-
 RUN [ ! -z "${ARCH}" ]
-RUN [ ! -z "${VERSION}" ]
