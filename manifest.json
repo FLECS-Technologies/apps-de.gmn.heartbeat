@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/FLECS-Technologies/app-sdk/3.0.0/manifest.schema.json",
     "_schemaVersion": "3.0.0",
     "app": "de.gmn.heartbeat",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "revision": "0",
     "image": "flecs.azurecr.io/de.gmn.heartbeat",
     "multiInstance": false,
@@ -21,5 +21,8 @@
         "data:/app/data",
         "fleetManagementData:/app/fleetManagementData"
     ],
-    "env": []
+    "env": [
+        "IDEA4S_BRIDGE_HOST=tech.flecs.core",
+        "IDEA4S_BRIDGE_PORT=8050"
+    ]
 }
